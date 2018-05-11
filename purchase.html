@@ -16,15 +16,15 @@
 <div class="sticky-wall">
   <nav class="top-menu">
     <img class="top-logo" src="img/bbhmlogo2.png" width="200px">
- <nav class="hamburger"><i class="fas fa-bars"></i></nav> 
-    <nav class="right-menu">
+ <nav class="hamburger"><!--<button onclick="myFunction()" class="dropbtn">--><i onclick="myFunction()" class="fas fa-bars dropbtn"></i><!--</button>--></nav>
+    <nav id="myDropdown" class="right-menu">
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="https://www.youtube.com/channel/UCHLn6eWp0706sydLGmOcL5w/featured" target="_blank">YouTube</a></li>
         <li><a href="licensekor.html">라이센스</a>
           
         </li>
-        <li><a href="purchase.html">구매양식</a>
+        <li><a class="active" href="purchase.html">구매양식</a>
           
         </li>
         <li><a href="contact.html">Contact</a></li>
@@ -43,7 +43,7 @@
     <div class="purchase">
      <h1 style="font-weight: bold;">구매양식 작성</h1>
         <hr class="ruler">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHiMNsIe6tIhTnHl4FLnsjewfhmlEIFM-4CFM7vdg6rnSToA/viewform?embedded=true" width="85%" height="1000px" frameborder="0" marginheight="0" marginwidth="0">로드 중...</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHiMNsIe6tIhTnHl4FLnsjewfhmlEIFM-4CFM7vdg6rnSToA/viewform?embedded=true" width="80%" height="1000px" frameborder="0" marginheight="0" marginwidth="0">로드 중...</iframe>
     </div>
     
     
@@ -58,6 +58,28 @@
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+       <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("right-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
   </body>
 
   </html>
